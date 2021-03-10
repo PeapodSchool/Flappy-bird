@@ -305,8 +305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a6872fd45961547b39980807971082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToSpawn: 1
-  pipe: {fileID: 2661790084733621189, guid: a8ec741def3defa4b92d0ee8d177daf6, type: 3}
+  timeToSpawn: 1.5
+  pipe1: {fileID: 2661790084733621189, guid: a8ec741def3defa4b92d0ee8d177daf6, type: 3}
+  pipe2: {fileID: 1088789428}
   height: 0.3
 --- !u!4 &249811492
 Transform:
@@ -507,6 +508,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1088789428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1951303603693769750, guid: b4faa914590bf33459f16c83de7edc5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1951303604782419874}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1436606121
 GameObject:
   m_ObjectHideFlags: 0
