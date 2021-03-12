@@ -14,7 +14,12 @@ public class PipeSpawner : MonoBehaviour
     private Coroutine spawnPipesCoroutine;
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    void Start()
+    {
+        
+    }
+
+    IEnumerator SpawnPipe()
     {
         while (true)
         {
@@ -24,11 +29,16 @@ public class PipeSpawner : MonoBehaviour
             }
             else if (pipeNum == 1)
             {
-                CreateAndMove(pipe2); 
+                CreateAndMove(pipe2);
             }
             yield return new WaitForSeconds(timeToSpawn);
             pipeNum = 1 - pipeNum;
         }
+    }
+
+    public void StartSpawning()
+    {
+        spawnPipesCoroutine = StartCoroutine(SpawnPipe());
     }
 
     private void CreateAndMove(GameObject pipe)
@@ -45,6 +55,12 @@ public class PipeSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GameObject newPipe = Instantiate(pipe1);
+        Vector3 randFactor = new Vector3(0,
+            Random.Range(-height, height), 0);
+        newPipe.transform.position =
+            transform.position + randFactor;
+        //Destroy(newPipe); // 5f - время до уничтожения
+                              // объекта-трубы (5с)
     }
 }
