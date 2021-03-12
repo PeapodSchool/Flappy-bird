@@ -55,12 +55,6 @@ public class PipeSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject newPipe = Instantiate(pipe1);
-        Vector3 randFactor = new Vector3(0,
-            Random.Range(-height, height), 0);
-        newPipe.transform.position =
-            transform.position + randFactor;
-        //Destroy(newPipe); // 5f - время до уничтожения
-                              // объекта-трубы (5с)
+
     }
 }
